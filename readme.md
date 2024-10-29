@@ -22,6 +22,7 @@ To view the website locally:
 4. Download extension to view and edit code (if necessary)
 5. Change sources of images and music according to your local directory
 
-1. Clone the repository:
+## Clone the repository:
    
    git clone [https://github.com/yourusername/logistics-website.git](https://github.com/JAESURO/WEB-project.git)
+   
