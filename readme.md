@@ -16,7 +16,12 @@ This website provides information and resources to offer logistics and cargo tra
 
 ## Getting Started
 To view the website locally:
+1. Download files via zip
+2. Change directories (if necessary)
+3. Maintain internet connection
+4. Download extension to view and edit code (if necessary)
+5. Change sources of images and music according to your local directory
 
 1. Clone the repository:
    
-   git clone https://github.com/yourusername/logistics-website.git
+   git clone [https://github.com/yourusername/logistics-website.git](https://github.com/JAESURO/WEB-project.git)
