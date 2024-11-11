@@ -88,25 +88,25 @@ trackShipmentButton.addEventListener('click', () => {
 
 async function trackShipment() {
     try {
-        // Fetching local JSON file
-        const response = await fetch('ship.json');
+        // Fetching data from a test API
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
         if (!response.ok) throw new Error(`Error: ${response.status}`);
         const data = await response.json();
 
         // Checking if there are more events to display
-        if (currentEventIndex < data.events.length) {
+        if (currentEventIndex < data.length) {
             // Creating shipment information element
             const shipmentInfo = document.createElement('div');
             shipmentInfo.classList.add('col-md-12', 'mb-4');
 
             // Fill information into element
-            const event = data.events[currentEventIndex];
+            const event = data[currentEventIndex];
             shipmentInfo.innerHTML = `
                 <div class="card">
                     <div class="card-body">
-                        <h5>Shipment Status: ${event.status}</h5>
-                        <p>Location: ${event.location_city}, ${event.location_state}</p>
-                        <p>Date: ${new Date(event.date).toLocaleString()}</p>
+                        <h5>Shipment Status: ${event.title}</h5>
+                        <p>Location: ${event.body}</p>
+                        <p>Date: ${new Date().toLocaleString()}</p>
                     </div>
                 </div>
             `;
@@ -123,6 +123,7 @@ async function trackShipment() {
         console.error('Failed to track shipment:', error);
     }
 }
+
 
 });
 
